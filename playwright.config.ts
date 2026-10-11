@@ -1,0 +1,2 @@
+import { defineConfig } from '@playwright/test'
+export default defineConfig({testDir:'tests/e2e',workers:1,fullyParallel:false,timeout:60_000,use:{baseURL:'http://127.0.0.1:1420',viewport:{width:1440,height:900},trace:'retain-on-failure'},webServer:[{command:'pnpm dev',url:'http://127.0.0.1:1420',reuseExistingServer:true},{command:'cargo build -p git-toys-engine --example test_driver --locked && node scripts/e2e-server.mjs',url:'http://127.0.0.1:1421/fixture',reuseExistingServer:false}]})

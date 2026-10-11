@@ -1,0 +1,1 @@
+{"ignore":["**/generated/**","**/tests/**","**/examples/**","**/target/**","**/node_modules/**"],"minLines":10,"threshold":0,"reporters":["console","json"]}
